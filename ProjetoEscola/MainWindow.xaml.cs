@@ -23,6 +23,59 @@ namespace ProjetoEscola
         public MainWindow()
         {
             InitializeComponent();
+            BtnHome.Visibility = Visibility.Collapsed;
+            txblTitulo.Text = BtnHome.Content.ToString();
+            Conteudo.Navigate(new Home());
         }
+
+        #region Funções 
+        private void EsmaecerBotão(Button Botao)
+        {
+            BtnAlunos.Visibility = Visibility.Visible;
+            BtnAtividades.Visibility = Visibility.Visible;
+            BtnHome.Visibility = Visibility.Visible;
+            BtnProfessores.Visibility = Visibility.Visible;
+            BtnTurmas.Visibility = Visibility.Visible;
+
+            Botao.Visibility = Visibility.Collapsed;
+        }
+        #endregion
+
+        #region Botões
+        private void BtnHome_Click(object sender, RoutedEventArgs e)
+        {
+            Button EsseBotao = (Button)e.Source;
+            txblTitulo.Text = EsseBotao.Content.ToString();
+            EsmaecerBotão(EsseBotao);
+        }
+
+        private void BtnAlunos_Click(object sender, RoutedEventArgs e)
+        {
+            Button EsseBotao = (Button)e.Source;
+            txblTitulo.Text = EsseBotao.Content.ToString();
+            EsmaecerBotão(EsseBotao);
+        }
+
+        private void BtnTurmas_Click(object sender, RoutedEventArgs e)
+        {
+            Button EsseBotao = (Button)e.Source;
+            txblTitulo.Text = EsseBotao.Content.ToString();
+            EsmaecerBotão(EsseBotao);
+        }
+
+        private void BtnAtividades_Click(object sender, RoutedEventArgs e)
+        {
+            Button EsseBotao = (Button)e.Source;
+            txblTitulo.Text = EsseBotao.Content.ToString();
+            EsmaecerBotão(EsseBotao);
+        }
+
+        private void BtnProfessores_Click(object sender, RoutedEventArgs e)
+        {
+            Button EsseBotao = (Button)e.Source;
+            txblTitulo.Text = EsseBotao.Content.ToString();
+            EsmaecerBotão(EsseBotao);
+        }
+        #endregion
     }
 }

@@ -24,5 +24,15 @@ namespace ProjetoEscola
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Porcentometro.Value += 5;
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Porcentometro.Value -= 5;
+        }
     }
 }

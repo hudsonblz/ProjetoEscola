@@ -11,7 +11,7 @@
     MinHeight="800"
     Background="{DynamicResource MaterialDesignPaper}"
     FontFamily="{DynamicResource MaterialDesignFont}"
-    TextElement.FontSize="13"
+    TextElement.FontSize="14"
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
     TextOptions.TextFormattingMode="Ideal"
@@ -20,20 +20,66 @@
     WindowState="Maximized"
     mc:Ignorable="d">
     <Grid>
-        <materialDesign:ColorZone Height="60" Mode="PrimaryDark" VerticalAlignment="Top">
+        <materialDesign:ColorZone
+            Height="50"
+            VerticalAlignment="Top"
+            materialDesign:ShadowAssist.ShadowDepth="Depth3"
+            Mode="PrimaryDark">
             <materialDesign:PopupBox
-                Height="52"
+                Height="50"
                 Margin="10,0"
                 VerticalAlignment="Center"
                 PlacementMode="BottomAndAlignCentres">
-                    <StackPanel>
-                        <Button Name="BtnHome" ToolTip="Tela inicial">Home</Button>
-                        <Button Name="BtnAlunos" ToolTip="Inclui, excluir e alterar informações de Alunos">Alunos</Button>
-                        <Button Name="BtnTurmas" ToolTip="Inclui, excluir e alterar informações de Turmas">Turmas</Button>
-                        <Button Name="BtnAtividades" ToolTip="Inclui, excluir e alterar informações de Atividades">Atividades</Button>
-                        <Button Name="BtnProfessores" ToolTip="Inclui, excluir e alterar informações de Professores">Professores</Button>
-                    </StackPanel>
-                </materialDesign:PopupBox>
+                <StackPanel>
+                    <Button
+                        Name="BtnHome"
+                        Click="BtnHome_Click"
+                        ToolTip="Tela inicial">
+                        Home
+                    </Button>
+                    <Button
+                        Name="BtnAlunos"
+                        Click="BtnAlunos_Click"
+                        ToolTip="Inclui, excluir e alterar informações de Alunos">
+                        Alunos
+                    </Button>
+                    <Button
+                        Name="BtnTurmas"
+                        Click="BtnTurmas_Click"
+                        ToolTip="Inclui, excluir e alterar informações de Turmas">
+                        Turmas
+                    </Button>
+                    <Button
+                        Name="BtnAtividades"
+                        Click="BtnAtividades_Click"
+                        ToolTip="Inclui, excluir e alterar informações de Atividades">
+                        Atividades
+                    </Button>
+                    <Button
+                        Name="BtnProfessores"
+                        Click="BtnProfessores_Click"
+                        ToolTip="Inclui, excluir e alterar informações de Professores">
+                        Professores
+                    </Button>
+                </StackPanel>
+            </materialDesign:PopupBox>
         </materialDesign:ColorZone>
+        <TextBlock
+            Name="txblTitulo"
+            Margin="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Foreground="White"
+            Style="{DynamicResource MaterialDesignTitleTextBlock}">
+            Titulo
+        </TextBlock>
+        <Frame
+            Name="Conteudo"
+
+            Margin="0,55,0,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            NavigationUIVisibility="Automatic"
+            ScrollViewer.VerticalScrollBarVisibility="Auto" />
     </Grid>
 </Window>
